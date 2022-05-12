@@ -3,25 +3,39 @@
 // que muestre los datos capturados
 
 
-
 // JS
  /*function mostrar(){
      console.log("enviar");
+     
  }
-*/
-   // Variable to hold request
-   var data = [];
-   $("#dataForm").submit(function(event) {
-       event.preventDefault();
-       data.push($(this).find('input[name="data"]').val());
-       alert("Dato Añadido");
-   });
+ window.onload = function() {
+  
+    miNombre= "<h5>" + document.rellenar.nombre.value + "</h5>"
+    document.rellenar.nombre.onclick = mostrar
+    escribir.innerHTML = miNombre;
+    }*/
 
-   function processData() {
-       alert(data);
-   }
+ 
 
-// EMC
-// document.querySelector("#btn").addEventListener("click", function(e){
-//     console.log(e);
+ // EMC
+ const mostrar = function(mensaje="No enviado",callback) {
+    document.querySelector(".mensaje").insertAdjacentHTML("beforeend", `<b>${mensaje} : <span>${callback.value}</span><br>`);
+};
+addEventListener("submit", function (e){
+    let input = e.target;
+    document.querySelector(".mensaje").innerHTML = null;
+    mostrar(" Mi Nombre", input.nombre);
+    mostrar(" Mi Apellido", input.apellido);
+    mostrar(" Mi Cedula", input.cedula);
+    mostrar(" Mi Fecha Nac", input.fechaNac);
+    mostrar(" Mi PaisNac", input.paisNac);
+    mostrar(" Mi Email", input.email);
+    mostrar(" Mi Telefono", input.telefono);
+    mostrar(" Mi Direccion", input.direccion);
+    mostrar(" Mi Mensaje", input.mensaje);
+    e.preventDefault();
+});
+
+/* document.querySelector("#btn").addEventListener("click", function(e){
+   console.log(e);
 // })

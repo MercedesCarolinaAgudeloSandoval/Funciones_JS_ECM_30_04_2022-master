@@ -1,3 +1,4 @@
+
 /* Importación de fuentes de google fonts */ 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
@@ -9,7 +10,7 @@ body{
 }
 
 
-.contact_form{  
+.form{  
   width: 460px; 
   height: auto;
   margin: 80px auto;
@@ -60,14 +61,14 @@ button{
   height: 45px; 
   padding-left: 5px;
   padding-right: 5px;   
-  margin-bottom: 20px; 
+  margin-bottom: 10px; 
   margin-top: 10px;   
   text-transform: uppercase;
   background-color: #ab4493; 
   border-color: #ab4493; 
   border-style: solid; 
   border-radius: 10px;  
-  width: 420px;   
+  width: 400px;   
   cursor: pointer;
 }
 
@@ -78,7 +79,7 @@ button p{
 
 
 span{
-  color: #ab4493; 
+  color: #070105; 
 }
 
 
